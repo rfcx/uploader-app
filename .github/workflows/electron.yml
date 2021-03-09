@@ -23,7 +23,7 @@ jobs:
         MACOS_CERTIFICATE_PWD: ${{ secrets.MAC_CERT_PWD }}
       run: |
       echo $MACOS_CERTIFICATE | base64 —decode > certificate.p12
-      security import certificate.p12 -k build.keychain -P ${{ secrets.MAC_CERT_PWD }}
+      security import certificate.p12 -P ${{ secrets.MAC_CERT_PWD }}
     - name: electron mac os security identities
       run: security find-identity -v
     - name: Install dependencies
