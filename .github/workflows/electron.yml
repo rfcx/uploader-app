@@ -12,18 +12,18 @@ jobs:
     - uses: actions/checkout@master
       with:
         ref: electron
+    - name: add key to single keychain
+      env: 
+        MACOS_CERTIFICATE: ${{ secrets.MAC_CERT_P12 }}
+        MACOS_CERTIFICATE_PWD: ${{ secrets.MAC_CERT_PWD }}
+      run: |
+      echo $MACOS_CERTIFICATE | base64 —decode > certificate.p12
+      security import certificate.p12 -P ${{ secrets.MAC_CERT_PWD }}
     - uses: actions/setup-node@master
       with:
         node-version: 10.16
     - name: see directory in electron_dist
       run: ls ./electron
-    # - name: add key to single keychain
-    #   env: 
-    #     MACOS_CERTIFICATE: ${{ secrets.MAC_CERT_P12 }}
-    #     MACOS_CERTIFICATE_PWD: ${{ secrets.MAC_CERT_PWD }}
-    #   run: |
-    #   echo $MACOS_CERTIFICATE | base64 —decode > certificate.p12
-    #   security import certificate.p12 -P ${{ secrets.MAC_CERT_PWD }}
     - name: electron mac os security identities
       run: security find-identity -v
     - name: Install dependencies
