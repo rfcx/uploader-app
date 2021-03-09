@@ -29,7 +29,7 @@
     "electron-devtools-installer": "^3.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-cli-plugin-electron-builder": "~2.0.0-rc.6",
+    "vue-cli-plugin-electron-builder": "^2.0.0-rc.6",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -50,60 +50,5 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ],
-  "build": {
-    "productName": "RFCx Uploader",
-    "appId": "org.rfcx.ingest",
-    "afterSign": "./after-sign-hook.js",
-    "directories": {
-      "output": "build"
-    },
-    "files": [
-      "dist/electron/**/*"
-    ],
-    "dmg": {
-      "sign": false,
-      "contents": [
-        {
-          "x": 410,
-          "y": 150,
-          "type": "link",
-          "path": "/Applications"
-        },
-        {
-          "x": 130,
-          "y": 150,
-          "type": "file"
-        }
-      ]
-    },
-    "mac": {
-      "icon": "dist_electron/icons/ingest-mac.png",
-      "provisioningProfile": "Ingest.provisionprofile",
-      "darkModeSupport": true,
-      "hardenedRuntime": true,
-      "entitlementsInherit": "dist_electron/entitlements.mac.inherit.plist",
-      "entitlements": "dist_electron/entitlements.mac.inherit.plist",
-      "target": [
-        "dmg",
-        "zip"
-      ]
-    },
-    "win": {
-      "icon": "build/icons/ingest-windows.ico",
-      "certificateFile": "./build/certs/certificate.p12",
-      "certificatePassword": "<YOUR_PASSWORD>",
-      "publisherName": "RFCx",
-      "timeStampServer": "http://timestamp.globalsign.com/scripts/timstamp.dll",
-      "target": [
-        {
-          "target": "squirrel",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        }
-      ]
-    }
-  }
+  ]
 }
