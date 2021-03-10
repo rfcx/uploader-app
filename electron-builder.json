@@ -7,7 +7,6 @@
     "output": "dist_electron"
   },
   "files": [
-    "dist/electron/**/*",
     "build_resouces/icons/**",
     "build_resouces/entitlements.mac.inherit.plist"
   ],
