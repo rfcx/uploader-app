@@ -1,5 +1,4 @@
 {
-  "build": {
   "productName": "RFCx Uploader",
   "appId": "org.rfcx.ingest",
   "afterSign": "./after-sign-hook.js",
@@ -61,6 +60,5 @@
   },
   "linux": {
     "icon": "build/icons"
-  }
   }
 }
