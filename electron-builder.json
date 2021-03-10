@@ -3,10 +3,13 @@
   "appId": "org.rfcx.ingest",
   "afterSign": "./after-sign-hook.js",
   "directories": {
+    "buildResources": "build_resouces",
     "output": "dist_electron"
   },
   "files": [
-    "dist/electron/**/*"
+    "dist/electron/**/*",
+    "build_resouces/icons/**",
+    "build_resouces/entitlements.mac.inherit.plist"
   ],
   "dmg": {
     "sign": false,
@@ -25,19 +28,19 @@
     ]
   },
   "mac": {
-    "icon": "dist_electron/icons/ingest-mac.png",
+    "icon": "build_resouces/icons/ingest-mac.png",
     "provisioningProfile": "Ingest.provisionprofile",
     "darkModeSupport": true,
     "hardenedRuntime": true,
-    "entitlementsInherit": "dist_electron/entitlements.mac.inherit.plist",
-    "entitlements": "dist_electron/entitlements.mac.inherit.plist",
+    "entitlementsInherit": "build_resouces/entitlements.mac.inherit.plist",
+    "entitlements": "build_resouces/entitlements.mac.inherit.plist",
     "target": [
       "dmg",
       "zip"
     ]
   },
   "win": {
-    "icon": "dist_electron/icons/ingest-windows.ico",
+    "icon": "build_resouces/icons/ingest-windows.ico",
     "publisherName": "RFCx",
     "target": "nsis"
   }
