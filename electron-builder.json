@@ -1,15 +1,10 @@
 {
   "productName": "RFCx Uploader",
   "appId": "org.rfcx.ingest",
-  "afterSign": "./after-sign-hook.js",
   "directories": {
     "buildResources": "build_resouces",
     "output": "dist_electron"
   },
-  "files": [
-    "build_resouces/icons/**",
-    "build_resouces/entitlements.mac.inherit.plist"
-  ],
   "dmg": {
     "sign": false,
     "contents": [
