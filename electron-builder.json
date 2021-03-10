@@ -1,1 +1,66 @@
-{}
+{
+  "build": {
+  "productName": "RFCx Uploader",
+  "appId": "org.rfcx.ingest",
+  "afterSign": "./after-sign-hook.js",
+  "directories": {
+    "output": "build"
+  },
+  "files": [
+    "dist/electron/**/*"
+  ],
+  "dmg": {
+    "sign": false,
+    "contents": [
+      {
+        "x": 410,
+        "y": 150,
+        "type": "link",
+        "path": "/Applications"
+      },
+      {
+        "x": 130,
+        "y": 150,
+        "type": "file"
+      }
+    ]
+  },
+  "mac": {
+    "icon": "build/icons/ingest-mac.png",
+    "provisioningProfile": "Ingest.provisionprofile",
+    "darkModeSupport": true,
+    "hardenedRuntime": true,
+    "entitlementsInherit": "build/entitlements.mac.inherit.plist",
+    "entitlements": "build/entitlements.mac.inherit.plist",
+    "target": [
+      "dmg",
+      "zip"
+    ]
+  },
+  "win": {
+    "icon": "build/icons/ingest-windows.ico",
+    "certificateFile": "./build/certs/certificate.p12",
+    "certificatePassword": "<YOUR_PASSWORD>",
+    "publisherName": "RFCx",
+    "timeStampServer": "http://timestamp.globalsign.com/scripts/timstamp.dll",
+    "target": [
+      {
+        "target": "squirrel",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      }
+    ]
+  },
+  "squirrelWindows": {
+    "iconUrl": "https://rfcx.org/favicon.ico",
+    "loadingGif": "build/icons/win-installer-loading.gif",
+    "remoteReleases": "http://localhost:5000/public",
+    "useAppIdAsId": false
+  },
+  "linux": {
+    "icon": "build/icons"
+  }
+  }
+}
