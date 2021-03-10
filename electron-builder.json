@@ -23,7 +23,7 @@
   },
   "mac": {
     "icon": "build_resouces/icons/ingest-mac.png",
-    "provisioningProfile": "Ingest.provisionprofile",
+    "provisioningProfile": "build_resouces/Ingest.provisionprofile",
     "darkModeSupport": true,
     "hardenedRuntime": true,
     "entitlementsInherit": "build_resouces/entitlements.mac.inherit.plist",
