@@ -41,24 +41,6 @@
     "certificateFile": "./build/certs/certificate.p12",
     "certificatePassword": "<YOUR_PASSWORD>",
     "publisherName": "RFCx",
-    "timeStampServer": "http://timestamp.globalsign.com/scripts/timstamp.dll",
-    "target": [
-      {
-        "target": "squirrel",
-        "arch": [
-          "x64",
-          "ia32"
-        ]
-      }
-    ]
-  },
-  "squirrelWindows": {
-    "iconUrl": "https://rfcx.org/favicon.ico",
-    "loadingGif": "build/icons/win-installer-loading.gif",
-    "remoteReleases": "http://localhost:5000/public",
-    "useAppIdAsId": false
-  },
-  "linux": {
-    "icon": "build/icons"
+    "target": "nsis"
   }
 }
