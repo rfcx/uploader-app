@@ -3,7 +3,8 @@ import App from './App.vue'
 import createDb from './electron/backgroundWindow/db'
 
 import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
+import './globals.scss'
+
 Vue.use(Buefy)
 
 Vue.config.productionTip = false
