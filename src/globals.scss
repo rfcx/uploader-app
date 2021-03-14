@@ -37,6 +37,22 @@ $warning: $warning-text-color;
 $dark: $box-color;
 $family-sans-serif: 'Lato', sans-serif;
 $link: $brand-primary;
+$body-background-color: $side-menu-background;
+
+// -- Nav
+$navbar-background-color: $side-menu-background;
+$navbar-item-color: $white-color;
+$navbar-item-hover-color: $white-color;
+$navbar-item-hover-background-color: $box-color;
+$navbar-item-active-color: $white-color;
+$navbar-dropdown-arrow: $white-color;
+$navbar-divider-background-color: $button-background-color;
+$navbar-dropdown-background-color: $side-menu-background;
+$navbar-dropdown-item-hover-color: $white-color;
+$navbar-dropdown-item-hover-background-color: $box-color;
+$navbar-padding-vertical: 0.5rem;
+$navbar-padding-horizontal: 0.5rem;
+$navbar-height: 4rem;
 
 // -- Tab
 $tabs-border-bottom-color: $box-color;

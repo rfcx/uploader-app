@@ -1,0 +1,48 @@
+@import "../../../../../../globals.scss";
+
+.navbar-title {
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+.navbar-brand img {
+  max-height: 2rem;
+}
+
+.navbar-item.is-active {
+  border-bottom-color: $brand-primary-dark;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  padding-bottom: calc(0.5rem - 3px);
+}
+
+.navbar-end {
+  margin-right: 0.2rem;
+}
+
+img.is-rounded {
+  border-radius: 290486px;
+}
+
+.element-title {
+  padding: 1rem;
+  color: #ccc;
+  font-size: 12px;
+}
+
+// Mobile view
+.navbar-menu.is-active .navbar-item.is-active {
+  border-left-color: $brand-primary-dark;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-bottom-width: 0;
+}
+
+.navbar-brand .left-burger {
+  align-items: flex-start;
+  margin-left: 0;
+}
+
+.navbar-brand .navbar-item {
+  margin: 0 auto;
+}

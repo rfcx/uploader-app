@@ -5,7 +5,7 @@ import path from 'path'
 export default async function createWindow () {
   // Create the browser window.
   const win = new BrowserWindow({
-    width: 1000,
+    width: 1024,
     height: 563,
     minWidth: 400,
     useContentSize: true,
