@@ -1,0 +1,40 @@
+@import '../../../../globals.scss';
+
+thead {
+  text-transform: uppercase;
+}
+thead td,
+thead th {
+  color: $secondary-text-color !important;
+  padding: 0.5em $default-padding !important;
+}
+.table tbody {
+  overflow-y: auto;
+}
+.file-list-table {
+  &__cell {
+    &_name,
+    &_error {
+      width: 35%;
+      width: 28%;
+    }
+    &_site,
+    &_timestamp {
+      width: 22%;
+    }
+    &_info {
+      width: 15%;
+      width: 16%;
+    }
+    &_controls {
+      width: 10%;
+      width: 8%;
+      text-align: right;
+      padding-right: 24px;
+    }
+  }
+}
+
+.notification {
+  margin: auto $default-padding-margin;
+}
