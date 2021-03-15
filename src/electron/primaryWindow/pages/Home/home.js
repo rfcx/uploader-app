@@ -1,8 +1,8 @@
-import Navigation from './components/Nav'
+import Tab from './components/Tab'
 
 export default {
   name: 'Home',
   components: {
-    Navigation
+    Tab
   }
 }
