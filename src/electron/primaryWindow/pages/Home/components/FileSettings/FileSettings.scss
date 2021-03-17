@@ -1,0 +1,30 @@
+@import "../../../../../../globals.scss";
+
+.file-settings {
+  &__wrapper {
+  padding: $default-padding;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  }
+  &__title {
+    font-weight: $title-font-weight;
+    color: $secondary-text-color;
+    display: block;
+  }
+  &__description {
+    color: $secondary-text-color;
+    display: inline-block;
+  }
+}
+.flex-row {
+  flex-direction: row;
+}
+.align-center {
+  align-items: center;
+}
+.dropdown {
+  margin-top: 4px;
+}

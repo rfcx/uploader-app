@@ -2,6 +2,7 @@
   <div class="" v-if="files.length > 0"></div>
   <div class="file-list__wrapper" v-else>
     <Tab ref="tab"></Tab>
+    <FileSettings @onImportFiles="handleFiles"/>
     <table class="table is-fullwidth file-list-table is-hoverable">
       <thead>
         <tr>
