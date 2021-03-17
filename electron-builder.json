@@ -1,6 +1,7 @@
 {
   "productName": "RFCx Uploader",
   "appId": "org.rfcx.ingest",
+  "afterSign": "./after-sign-hook.js",
   "directories": {
     "buildResources": "build_resouces",
     "output": "dist_electron"
