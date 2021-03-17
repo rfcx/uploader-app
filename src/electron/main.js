@@ -1,6 +1,7 @@
 import { app, protocol, BrowserWindow } from 'electron'
 import init from './init'
 import createPrimaryWindow from './primaryWindow'
+import {settings} from 'electron-settings'
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([

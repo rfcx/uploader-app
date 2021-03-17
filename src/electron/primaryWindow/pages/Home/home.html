@@ -1,0 +1,23 @@
+<div class="home__wrapper">
+  <div class="" v-if="files.length > 0"></div>
+  <div class="file-list__wrapper" v-else>
+    <Tab ref="tab"></Tab>
+    <FileSettings @onImportFiles="handleFiles"/>
+    <table class="table is-fullwidth file-list-table is-hoverable">
+      <thead>
+        <tr>
+          <td v-if="!isPreparedTab" class="file-list-table__cell file-list-table__cell_status"></td>
+          <td class="file-list-table__cell file-list-table__cell_name">Name</td>
+          <td class="file-list-table__cell file-list-table__cell_timestamp">Timestamp</td>
+          <td class="file-list-table__cell file-list-table__cell_site">Site</td>
+          <td class="file-list-table__cell file-list-table__cell_info">Duration</td>
+          <td class="file-list-table__cell file-list-table__cell_info">File size</td>
+          <td class="file-list-table__cell file-list-table__cell_controls"></td>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <file-row :selectedTab="selectedTab" v-for="file in files.slice(0, visibleRows)" :key="file.id" :file="file" @onTrashPressed="showConfirmToDeleteFileDialog(file)"></file-row> -->
+      </tbody>
+    </table>
+  </div>
+</div>

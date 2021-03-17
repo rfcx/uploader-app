@@ -1,0 +1,20 @@
+<div class="file-settings__wrapper">
+  <div>
+    <span class="file-settings__title">Filename Format</span>
+    <b-dropdown aria-role="list">
+      <template #trigger="{ active }">
+          <b-button
+              label="Select timestamp format"
+              :icon-right="active ? 'menu-up' : 'menu-down'" />
+      </template>
+      <b-dropdown-item aria-role="listitem" v-for="format in fileNameFormatOptions" :key="format">{{format}}</b-dropdown-item>
+    </b-dropdown>
+  </div>
+  <div>
+    <b-button type="is-cancel is-rounded">
+      📂 Choose Files
+      <input class="file-input" type="file" ref="file" v-on:change="importFiles($event)" multiple/>
+    </b-button>
+    <b-button type="is-primary is-rounded" @click.prevent="queueToUpload()">⬆️ Start upload</b-button>
+  </div>
+</div>

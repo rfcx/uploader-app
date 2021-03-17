@@ -1,27 +1,34 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navigation/>
+    <Home/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navigation from './components/Navigation'
+import Home from './electron/primaryWindow/pages/Home'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navigation, Home
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "./globals.scss";
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 0;
+  position: absolute;
+  top: $navbar-height;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  overflow-y: auto;
 }
+
 </style>

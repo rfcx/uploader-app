@@ -1,0 +1,17 @@
+<div class="file-tab__wrapper">
+  <div class="tabs is-fullwidth">
+    <ul>
+      <li
+        v-for="tab in tabGroups"
+        :key="tab"
+        :class="{ 'is-active': selectedTab ? tab === selectedTab : tab === 'Prepared' }"
+        @click="setActive(tab)"
+      >
+        <a>
+          <!-- <img class="file-tab__fail-icon" :src="require(`../../../../../../assets/ic-state-failed.svg`)" v-if="hasFailedFiles(tab)" /> -->
+          <span>{{tab}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

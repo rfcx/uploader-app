@@ -2,11 +2,15 @@ const builderOptions = require('./electron-builder')
 const isDev = process.env.NODE_ENV !== 'production'
 
 module.exports = {
+  configureWebpack: {
+    devtool: 'source-map'
+  },
   pluginOptions: {
     electronBuilder: {
       builderOptions,
       mainProcessFile: isDev ? 'src/electron/mainDev.js' : 'src/electron/main.js',
       preload: 'src/electron/preload.js',
+      nodeIntegration: true
     }
   },
   pages: {
