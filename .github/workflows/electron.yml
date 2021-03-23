@@ -34,7 +34,5 @@ jobs:
           use_vue_cli: true
           max_attempts: 3
         env:
-          APPLE_API_KEY_ID: ${{ secrets.API_KEY_ID }},
-          APPLE_API_KEY_ISSUER_ID: ${{ secrets.API_KEY_ISSUER_ID }}
           API_KEY_ID: ${{ secrets.API_KEY_ID }},
           API_KEY_ISSUER_ID: ${{ secrets.API_KEY_ISSUER_ID }}
